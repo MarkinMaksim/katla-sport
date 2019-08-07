@@ -31,7 +31,6 @@ export class HiveSectionListComponent implements OnInit {
   onDelete(hiveId: number) {
     var hiveSection = this.hiveSections.find(h => h.id == hiveId);
     this.hiveSectionService.setHiveSectionStatus(hiveId, true).subscribe(c => hiveSection.isDeleted = true);
-    console.log(this.hiveSections);
   }
 
   onUndelete(hiveId: number) {

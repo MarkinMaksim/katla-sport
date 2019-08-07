@@ -116,6 +116,44 @@ namespace KatlaSport.DataAccess.Migrations
                     customer_phone = c.String(),
                 })
                 .PrimaryKey(t => t.customer_id);
+
+            CreateTable(
+                "dbo.accountants",
+                c => new
+                {
+                    accountant_id = c.Int(nullable: false, identity: true),
+                    accountant_name = c.String(maxLength: 20),
+                    accountant_surname = c.String(maxLength: 20),
+                    accountant_age = c.Int(nullable: false),
+                    accountant_chiefid = c.Int(nullable: true),
+                    accountant_photo = c.String(),
+                })
+                .PrimaryKey(t => t.accountant_id)
+                .ForeignKey("dbo.accountants", t => t.accountant_chiefid, cascadeDelete: false);
+
+            CreateTable(
+                "dbo.companys",
+                c => new
+                {
+                    company_id = c.Int(nullable: false, identity: true),
+                    company_name = c.String(),
+                    company_address = c.String(),
+                    company_city = c.String(),
+                    company_country = c.String(),
+                })
+                .PrimaryKey(t => t.company_id);
+
+            CreateTable(
+                "dbo.report",
+                c => new
+                {
+                    report_id = c.Int(nullable: false, identity: true),
+                    report_company_id = c.Int(nullable: false),
+                    report_account_id = c.Int(nullable: false),
+                })
+                .PrimaryKey(t => t.report_id)
+                .ForeignKey("dbo.companys", t => t.report_company_id, cascadeDelete: false)
+                .ForeignKey("dbo.accountants", t => t.report_account_id, cascadeDelete: false);
         }
 
         public override void Down()

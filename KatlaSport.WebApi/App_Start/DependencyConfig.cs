@@ -17,7 +17,7 @@ namespace KatlaSport.WebApi
             builder.RegisterWebApiFilterProvider(config);
             builder.RegisterWebApiModelBinderProvider();
             builder.RegisterAssemblyModules(AppDomain.CurrentDomain.GetAssemblies().Where(a => a.FullName.StartsWith("Katla")).ToArray());
-
+           
             config.DependencyResolver = new AutofacWebApiDependencyResolver(builder.Build());
         }
     }

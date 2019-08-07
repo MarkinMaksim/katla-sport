@@ -10,6 +10,12 @@ import { ProductFormComponent } from './product-management/forms/product-form.co
 import { ProductCategoryListComponent } from './product-management/lists/product-category-list.component';
 import { ProductCategoryProductListComponent } from './product-management/lists/product-category-product-list.component';
 import { ProductListComponent } from './product-management/lists/product-list.component';
+import { AccountantListComponent } from './accountant-managment/lists/accountant-list.component';
+import { AccountantFormComponent } from './accountant-managment/form/accountant-form.component';
+import { CompanyListComponent } from './company-managment/lists/company-list.component';
+import { CompanyFormComponent } from './company-managment/form/company-form.component';
+import { ReportListComponent } from './report-managment/lists/report-list.component';
+import { ReportFormComponent } from './report-managment/form/report-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -27,6 +33,15 @@ const routes: Routes = [
   { path: 'hive/:id/sections', component: HiveSectionListComponent },
   { path: 'hive/:store-hive-id/section', component: HiveSectionFormComponent },
   { path: 'hive/:store-hive-id/section/:id', component: HiveSectionFormComponent },
+  { path: 'accountants', component: AccountantListComponent },
+  { path: 'accountant/:id', component: AccountantFormComponent },
+  { path: 'accountant', component: AccountantFormComponent },
+  { path: 'companys', component: CompanyListComponent },
+  { path: 'company/:id', component: CompanyFormComponent },
+  { path: 'company', component: CompanyFormComponent },
+  { path: 'reports', component: ReportListComponent },
+  { path: 'report/:id', component: ReportFormComponent },
+  { path: 'report', component: ReportFormComponent },
 ];
 
 @NgModule({

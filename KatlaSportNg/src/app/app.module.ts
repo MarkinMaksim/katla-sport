@@ -19,6 +19,13 @@ import { ProductCategoryProductListComponent } from 'app/product-management/list
 import { ProductListComponent } from 'app/product-management/lists/product-list.component';
 import { ProductCategoryService } from 'app/product-management/services/product-category.service';
 import { ProductService } from 'app/product-management/services/product.service';
+import { AccountantListComponent } from 'app/accountant-managment/lists/accountant-list.component';
+import { AccountantFormComponent } from './accountant-managment/form/accountant-form.component';
+import { CompanyListComponent } from './company-managment/lists/company-list.component';
+import { CompanyFormComponent } from './company-managment/form/company-form.component';
+import { ReportListComponent } from './report-managment/lists/report-list.component';
+import { ReportFormComponent } from './report-managment/form/report-form.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +40,12 @@ import { ProductService } from 'app/product-management/services/product.service'
     HiveFormComponent,
     HiveSectionFormComponent,
     HiveSectionListComponent,
+    AccountantListComponent,
+    AccountantFormComponent,
+    CompanyListComponent,
+    CompanyFormComponent,
+    ReportListComponent,
+    ReportFormComponent,
   ],
   imports: [
     // Angular imports
