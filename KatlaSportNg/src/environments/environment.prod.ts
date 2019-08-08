@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://katlasportserver.azurewebsites.net/',
+  apiUrl: 'http://web-api.mydomain.com/',
 };

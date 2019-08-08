@@ -12,7 +12,7 @@ import { AccountantItem } from '../models/accountant-item'
 export class AccountantFormComponent implements OnInit {
 
   file: File = null;
-  accountant = new AccountantItem(0, "", "", 0, null, "");
+  accountant = new AccountantItem(0, "", "", 0, 0, "");
   existed = false;
   accountanslist: AccountantItem[];
 
